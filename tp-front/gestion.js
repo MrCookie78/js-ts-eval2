@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded"  , async () => {
 	// écouter quand on clique dans la zone js-list-tache
 	document.querySelector(".liste").addEventListener("click" , async e => {
 	e.preventDefault();
-	
+
 	if(e.target.className.includes("btn")){
 		const form = e.target.parentNode.parentNode;
 		const action = e.target.value ;
@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded"  , async () => {
 
 function generListe(data){
 
-	if(data.length === 0) return "<p>Veuillez ajouter des ...</p>";
+	if(data.length === 0) return "<p>Aucune dépenses / recettes.</p>";
 
 	return data.map( d => {
 			return `<form class="row">

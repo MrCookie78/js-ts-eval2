@@ -14,7 +14,7 @@ document.querySelector("#add").addEventListener("submit" , async function(e) {
 	const{value , error} =  schemaDepense.validate(depense , {abortEarly : false})
 	if(error){
 		document.querySelector(".error").innerHTML = error.details.map( d => {
-			return `<p>${d.message}</p>`
+			return `<div class="alert alert-danger col-md-4 offset-4" role="alert">${d.message}</div>`
 		} ).join("")
 		return
 	}

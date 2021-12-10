@@ -47,7 +47,7 @@ window.addEventListener("DOMContentLoaded"  , async () => {
 			const{value , error} =  schemaDepenseModif.validate(data , {abortEarly : false})
 			if(error){
 				document.querySelector(".errorModif").innerHTML = error.details.map( d => {
-					return `<p>${d.message}</p>`
+					return `<div class="alert alert-danger col-md-4 offset-4" role="alert">${d.message}</div>`
 				} ).join("")
 				return
 			}
